@@ -1,24 +1,25 @@
 import React from "react";
 import { withRouter } from "react-router";
 import Color from "../HOC/Color";
+import logo from '../../assets/images/mascos.png'
+class Homepage extends React.Component {
 
-class Homepage extends React.Component{
-
-    componentDidMount(){
+    componentDidMount() {
         // setTimeout(()=>{
         //     this.props.history.push('/todo')
         // },3000)
     }
-    state ={
-        name:'Phuong'
+    state = {
+        name: 'Phuong'
     }
 
-    render(){
-        
+    render() {
+
         console.log('>>>> Chekc props khi co ham withRouter', this.props)
-        return(
+        return (
             <div>
                 Hello wellcome to Homepage
+                <div><img src={logo} alt="" /></div>
             </div>
         )
     }
