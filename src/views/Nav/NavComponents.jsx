@@ -11,13 +11,13 @@ class NavComponent extends React.Component {
           Home
         </NavLink>
         <NavLink to="/todo" activeClassName="active">
-              Todo
+          Todo
         </NavLink>
         <NavLink to="/about" activeClassName="active">
           About
         </NavLink>
-        <NavLink to ='/user' activeClassName='active'>
-          User 
+        <NavLink to='/user' activeClassName='active'>
+          User
         </NavLink>
 
         {/* thẻ Link của react-router-dom */}

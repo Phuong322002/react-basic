@@ -4,6 +4,11 @@ import './styles/global.scss'
 import App from './views/App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+// import rootReducer from './reducers'
+import rootReducer from './store/reducers/rootReducer';
+
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
@@ -11,9 +16,18 @@ import reportWebVitals from './reportWebVitals';
 //   </React.StrictMode>
 // );
 
+const storeRedux = createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+// const store = createStore(
+//   reducer, /* preloadedState, */
+// +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// );
+
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={storeRedux}>
    <App />
+   </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )
